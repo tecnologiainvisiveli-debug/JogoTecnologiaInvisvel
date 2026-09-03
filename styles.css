@@ -1,0 +1,23 @@
+/* Boa tarde Chat,
+
+preciso que você crie um código CSS para estilização do seguinte código: <body>
+
+    <h1>Bem-Vindo ao Jogo</h1>
+
+    <div id="sideBar">
+        <label for="jogoPrincipal" class="btnAbas">Continuar Jogando</label>
+        <input type="radio" name="abas" id="jogoPrincipal">
+        <div class="abas"></div>
+
+        <label for="statusPersonagem" class="btnAbas">Status do Personagem</label>
+        <input type="radio" name="abas" id="statusPersonagem">
+        <div class="abas"></div>
+
+        <label for="historico" class="btnAbas">Histórico</label>
+        <input type="radio" name="abas" id="historico">
+        <div class="abas"></div>
+    </div>
+
+quero que faça o sistemas de abas funcionar, pretendo que o body com o h1 aparece quando usuário entre na página, somente antes de clicar em uma aba, depois pode deixar ocultado.
+
+Quero que posicione a barra de navegação de forma com fixed na parte de cima da pagina ocupando a largura total da tela com os três botões próximos ao centro para tonar la mais intuitiva, pode por um suave efeito hoder para transição de cor ao cursor passar o mouse por cima do próprio. Além de fazer cada aba ocupar cada 
