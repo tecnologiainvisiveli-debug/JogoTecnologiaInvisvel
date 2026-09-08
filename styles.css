@@ -1,13 +1,13 @@
 /*    Sistemas de Abas    */
 .abas, #jogoPrincipal, #statusPersonagem, #historico {
     display: none;
-};
+}
 #jogoPrincipal:checked + .abas {
     display: block;
-};
-#statusPersonagem + .abas {
+}
+#statusPersonagem:checked + .abas {
     display: block;
-};
+}
 #historico:checked + .abas {
     display: block;
 }
