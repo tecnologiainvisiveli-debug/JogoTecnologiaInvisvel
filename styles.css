@@ -4,10 +4,17 @@
 }
 #jogoPrincipal:checked + .abas {
     display: block;
+    grid-area: "abaVisualizada";
 }
 #statusPersonagem:checked + .abas {
     display: block;
 }
 #historico:checked + .abas {
     display: block;
+}
+
+/*    Grid    */
+body {
+    display: grid;
+    grid-template-rows: auto auto auto;
 }
