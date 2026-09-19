@@ -3,14 +3,13 @@
     display: none;
 }
 #jogoPrincipal:checked + .abas {
-    display: block;
-    grid-area: "abaVisualizada";
+    grid-area: abaVisualizada;
 }
 #statusPersonagem:checked + .abas {
-    display: block;
+    grid-area: abaVisualizada;
 }
 #historico:checked + .abas {
-    display: block;
+    grid-area: abaVisualizada;
 }
 
 /*    Grid    */
@@ -18,5 +17,17 @@ body {
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr auto;
-
+    grid-template-areas:
+        "header header"
+        "sideBar abaVisualizada"
+    ;
+}
+.sideBar {
+    grid-area: sideBar;
+    background-color: var(--cor-segundaria);
+    justify-content: column;
+}
+header {
+    grid-area: header;
+    background-color: var(--cor-segundaria);
 }
