@@ -16,5 +16,7 @@
 /*    Grid    */
 body {
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+
 }
