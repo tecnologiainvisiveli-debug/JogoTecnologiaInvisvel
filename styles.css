@@ -1,11 +1,12 @@
-/* Sistema de Abas */
+/*==========================
+    Sistema de Abas
+==========================*/
 .abas,
 #jogoPrincipal,
 #statusPersonagem,
 #historico {
     display: none;
 }
-
 #jogoPrincipal:checked + .abas,
 #statusPersonagem:checked + .abas,
 #historico:checked + .abas {
@@ -13,22 +14,29 @@
     grid-area: abaVisualizada;
     background-color: var(--cor-de-fundo);
 }
+/*==========================*/
 
-/* Grid no Body */
+
+/*==========================
+    Grid no Body
+==========================*/    
 body {
     min-height: 100vh;
     margin: 0;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto 2fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
         "header header"
         "sideBar abaVisualizada";
     background-color: var(--cor-do-body);
     gap: 5px;
 }
+/*==========================*/
 
-/* Estilização da Barra Lateral */
+/*==========================
+    Estilização do SideBar
+==========================*/
 #sideBar {
     grid-area: sideBar;
     background-color: var(--cor-segundaria);
@@ -45,8 +53,21 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
+.btnAbas:hover {
+    background-color: var(--cor-de-alerta-e-destaques);
+    color: var(--cor-de-fundo);
+}
+.btnAbas .imgAbas {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: currentColor;
+}
+/*==========================*/
 
-/* Estilização do Cabeçalho */
+/*==========================
+    Estilização do Header
+==========================*/
 header {
     grid-area: header;
     background-color: var(--cor-segundaria);
