@@ -1,33 +1,57 @@
-/*    Sistemas de Abas    */
-.abas, #jogoPrincipal, #statusPersonagem, #historico {
+/* Sistema de Abas */
+.abas,
+#jogoPrincipal,
+#statusPersonagem,
+#historico {
     display: none;
 }
-#jogoPrincipal:checked + .abas {
-    grid-area: abaVisualizada;
-}
-#statusPersonagem:checked + .abas {
-    grid-area: abaVisualizada;
-}
+
+#jogoPrincipal:checked + .abas,
+#statusPersonagem:checked + .abas,
 #historico:checked + .abas {
+    display: block;
     grid-area: abaVisualizada;
+    background-color: var(--cor-de-fundo);
 }
 
-/*    Grid    */
+/* Grid no Body */
 body {
+    min-height: 100vh;
+    margin: 0;
     display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 2fr;
     grid-template-areas:
         "header header"
-        "sideBar abaVisualizada"
-    ;
+        "sideBar abaVisualizada";
+    background-color: var(--cor-do-body);
+    gap: 5px;
 }
-.sideBar {
+
+/* Estilização da Barra Lateral */
+#sideBar {
     grid-area: sideBar;
     background-color: var(--cor-segundaria);
-    justify-content: column;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
 }
+.btnAbas {
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-alerta-e-destaques);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilização do Cabeçalho */
 header {
     grid-area: header;
     background-color: var(--cor-segundaria);
+    color: var(--cor-dos-titulos);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

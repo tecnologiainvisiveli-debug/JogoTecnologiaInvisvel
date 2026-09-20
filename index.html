@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nome do jogo</title>
+
+    <!-- Link para o arquivo CSS externo -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="Cores e Tipografia.css">
     
@@ -14,13 +16,24 @@
     </header>
 
     <div id="sideBar">
-        <label for="jogoPrincipal" class="btnAbas">Continuar Jogando</label>
-        <label for="statusPersonagem" class="btnAbas">Status do Personagem</label>
-        <label for="historico" class="btnAbas">Historico</label>
+        <label for="jogoPrincipal" class="btnAbas">
+            <img src="imagens/icones/cpu.svg" alt=" " class="imgAbas">
+            Continuar Jogando
+        </label>
+
+        <label for="statusPersonagem" class="btnAbas">
+            <img src="imagens/icones/laptop.svg" alt=" " class="imgAbas">
+            Status do Personagem
+        </label>
+
+        <label for="historico" class="btnAbas">
+            <img src="imagens/icones/hdd-stack.svg" alt=" " class="imgAbas">
+            Historico
+        </label>
     </div>
 
     
-    <input type="radio" name="abas" id="jogoPrincipal">
+    <input type="radio" name="abas" id="jogoPrincipal" checked>
     <div class="abas">aba1</div>
 
     <input type="radio" name="abas" id="statusPersonagem">
