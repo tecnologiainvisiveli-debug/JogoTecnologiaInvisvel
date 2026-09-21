@@ -1,3 +1,25 @@
+/* Importando fontes do repositório */
+
+/* Fonte Orbitron */
+@font-face {
+    font-family: "Orbitron";
+    src: url("../fontes/Orbitron font/Orbitron-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+/* Fonte Chakra Petch */
+@font-face {
+    font-family: "Chakra Petch";
+    src: url("../fontes/Chakra_Petch font/ChakraPetch-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+/* Fonte Exo 2 */
+@font-face {
+    font-family: "Exo 2";
+    src: url("../fontes/Exo_2 font/Exo2-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+/* Variáveis CSS */
 :root {
 
     /* Cores da Página */
@@ -10,6 +32,7 @@
     --cor-do-body: #7000ff;
 
     /* Tipografia */
-
-    
+    --fonte-dos-titulos: "Orbitron", sans-serif;
+    --fonte-das-opcoes: "Chakra Petch", sans-serif;
+    --fonte-do-texto-principal: "Exo 2", sans-serif;
 }

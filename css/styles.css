@@ -1,6 +1,4 @@
-/*==========================
-    Sistema de Abas
-==========================*/
+/* Sistema de abas */
 .abas,
 #jogoPrincipal,
 #statusPersonagem,
@@ -14,12 +12,8 @@
     grid-area: abaVisualizada;
     background-color: var(--cor-de-fundo);
 }
-/*==========================*/
 
-
-/*==========================
-    Grid no Body
-==========================*/    
+/* Grid Layout */ 
 body {
     min-height: 100vh;
     margin: 0;
@@ -32,11 +26,8 @@ body {
     background-color: var(--cor-do-body);
     gap: 5px;
 }
-/*==========================*/
 
-/*==========================
-    Estilização do SideBar
-==========================*/
+/* Estilização da Barra Lateral */
 #sideBar {
     grid-area: sideBar;
     background-color: var(--cor-segundaria);
@@ -54,6 +45,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     align-items: center;
+    font-family: var(--fonte-das-opcoes);
 }
 .btnAbas:hover {
     background-color: var(--cor-de-alerta-e-destaques);
@@ -66,11 +58,8 @@ body {
     fill: currentColor;
     flex-shrink: 0;
 }
-/*==========================*/
 
-/*==========================
-    Estilização do Header
-==========================*/
+/* Estilização do Cabeçalho */
 header {
     grid-area: header;
     background-color: var(--cor-segundaria);
@@ -78,4 +67,5 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--fonte-dos-titulos);
 }

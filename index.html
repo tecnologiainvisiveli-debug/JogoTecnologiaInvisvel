@@ -55,15 +55,36 @@
 
     <!-- Aba "Jogo Principal" -->
     <input type="radio" name="abas" id="jogoPrincipal" checked>
-    <div class="abas">aba1</div>
+    <div class="abas" id="abaContinuarJogando">
+        <div class="conteudoAba">
+            <h2></h2>
+            <p></p>
+            <div id="decisaoDoUsuario"></div>
+        </div>
+    </div>
 
     <!-- Aba "Status do Personagem" -->
     <input type="radio" name="abas" id="statusPersonagem">
-    <div class="abas">aba2</div>
+    <div class="abas" id="abaStatusPersonagem">
+        <div class="conteudoAba">
+            <h2>Conteúdo da Aba "Status do Personagem"</h2>
+            <p>Aqui você pode colocar o conteúdo relacionado ao status do personagem.</p>
+        </div>
+    </div>
 
     <!-- Aba "Histórico" -->
     <input type="radio" name="abas" id="historico">
-    <div class="abas">aba3</div>
+    <div class="abas" id="abaHistorico">
+        <div class="conteudoAba">
+            <h2>Conteúdo da Aba "Histórico"</h2>
+            <p>Aqui você pode colocar o conteúdo relacionado ao histórico do jogo.</p>
+        </div>
+    </div>
 
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="js/variaveis.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/arrayDeMensagens.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
