@@ -52,6 +52,8 @@ body {
     margin: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
 }
 .btnAbas:hover {
     background-color: var(--cor-de-alerta-e-destaques);
@@ -62,6 +64,7 @@ body {
     height: 20px;
     margin-right: 10px;
     fill: currentColor;
+    flex-shrink: 0;
 }
 /*==========================*/
 

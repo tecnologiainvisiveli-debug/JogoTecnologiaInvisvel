@@ -1,4 +1,6 @@
 :root {
+
+    /* Cores da Página */
     --cor-de-fundo: #0d0f12;
     --cor-dos-titulos: #00e5ff;
     --cor-do-texto-principal: #c5ced8;
@@ -6,4 +8,8 @@
     --cor-do-texto-das-opcoes: #7000ff;
     --cor-de-alerta-e-destaques: #ff0055;
     --cor-do-body: #7000ff;
+
+    /* Tipografia */
+
+    
 }
