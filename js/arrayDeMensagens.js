@@ -9,7 +9,7 @@ const arrayDeMensagens = [
     /* Texto de boas-vindas */
     {
         titulo: "Boas-vindas",
-        mensagem: "Olá! Seja bem-vindo(a) ao jogo (nome do jogo). Estamos felizes em tê-lo(a) aqui! aqui você encontrará desafios emocionantes, decisões importantes e oportunidades de se divertir. Cada escolha que você fizer terá um impacto no desenrolar da história. Prepare-se para embarcar em uma jornada única e tecnológica. Boa sorte!"
+        mensagem: "Olá! Seja bem-vindo(a) ao 404:YOU. Estamos felizes em tê-lo(a) aqui! aqui você encontrará desafios emocionantes, decisões importantes e oportunidades de se divertir. Cada escolha que você fizer terá um impacto no desenrolar da história. Prepare-se para embarcar em uma jornada única e tecnológica. Boa sorte!"
     },
 
     /* Decidindo o nome de usuário */

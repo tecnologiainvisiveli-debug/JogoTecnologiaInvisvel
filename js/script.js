@@ -3,6 +3,10 @@ for (let i = 0; i < arrayDeMensagens.length; i++) {
         h2JogoPrincipal.textContent = arrayDeMensagens[i].titulo;
         pJogoPrincipal.textContent = arrayDeMensagens[i].mensagem;
 
-        decisaoDoUsuario.innerHTML = '<button id="btn1">Começar</button>'; 
+        decisaoDoUsuario.innerHTML = '<button id="btn1">Começar</button>';
+
+        btn1.addEventListener('click',function() {
+            for ()
+        })
     }
 };
