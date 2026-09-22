@@ -46,6 +46,7 @@ body {
     display: flex;
     align-items: center;
     font-family: var(--fonte-das-opcoes);
+    border-radius: 10px;
 }
 .btnAbas:hover {
     background-color: var(--cor-de-alerta-e-destaques);
@@ -68,4 +69,44 @@ header {
     align-items: center;
     justify-content: center;
     font-family: var(--fonte-dos-titulos);
+}
+
+/* Estilização da Aba "Jogo Principal" */
+#jogoPrincipal:checked + #abaContinuarJogando {
+    display: flex;
+    grid-area: abaVisualizada;
+    background-color: var(--cor-de-fundo);
+    justify-content: center;
+    align-items: center;
+}
+#jogoPrincipal:checked + #abaContinuarJogando .conteudoAba {
+    height: 90%;
+    width: 90%;
+    background-color: var(--cor-segundaria);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+        "titulo"
+        "mensagem"
+        "decisao";
+}
+#jogoPrincipal:checked + #abaContinuarJogando .conteudoAba h2 {
+    grid-area: titulo;
+    color: var(--cor-dos-titulos);
+    font-family: var(--fonte-dos-titulos);
+    text-align: center;
+}
+#jogoPrincipal:checked + #abaContinuarJogando .conteudoAba p {
+    grid-area: mensagem;
+    color: var(--cor-do-texto-principal);
+    font-family: var(--fonte-do-texto-principal);
+    text-align: center;
+}
+#jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario {
+    grid-area: decisao;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
