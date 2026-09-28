@@ -1,12 +1,22 @@
-for (let i = 0; i < arrayDeMensagens.length; i++) {
-    if (arrayDeMensagens[i].titulo === "Boas-vindas") {
-        h2JogoPrincipal.textContent = arrayDeMensagens[i].titulo;
-        pJogoPrincipal.textContent = arrayDeMensagens[i].mensagem;
+/* Boas-vindas */
+mudarMensagem("Boas-vindas");
 
-        decisaoDoUsuario.innerHTML = '<button id="btn1">Começar</button>';
+/* Primeira opção de uma mensagem */
+let btn1 = document.querySelector('#btn1');
+/* Segunda opção de uma mensagem */
+let btn2 = document.querySelector('#btn2');
 
-        btn1.addEventListener('click',function() {
-            for ()
-        })
+/* Decidindo nome do usuário */
+btn1.addEventListener("click", function() {
+    addHistorico(btn1)
+    mudarMensagem("Criando uma conta"); 
+});
+let btnConfirmar = document.querySelector('#btnConfirmar');
+decisaoDoUsuario.addEventListener("click", function(event) {
+    if (event.target.id === "btnConfirmar") {
+        perfil.nomeDoUsuario =
+            decisaoDoUsuario.querySelector("input").value.trim();
+
+        mudarMensagem("Explorando a internet");
     }
-};
+});

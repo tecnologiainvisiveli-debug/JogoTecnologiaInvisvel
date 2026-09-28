@@ -103,10 +103,42 @@ header {
     color: var(--cor-do-texto-principal);
     font-family: var(--fonte-do-texto-principal);
     text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    line-height: var(--espaco-entre-linhas);
 }
 #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario {
     grid-area: decisao;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+}
+#btn1, #btn2 {
+    height: 80%;
+    width: 30%;
+    border: 2px solid var(--cor-de-alerta-e-destaques);
+    border-radius: 10px;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-alerta-e-destaques);
+    font-family: var(--fonte-das-opcoes);
+    font-size: larger;
+
+}
+
+/* Estilização da Aba "Histórico" */
+#historico:checked + #abaHistorico .conteudoAba {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    height: 100%;
+
+}
+.etapaConcluida {
+    background-color: var(--cor-segundaria);
+    font-family: var(--fonte-do-texto-principal);
+    color: var(--cor-do-texto-principal);
+    line-height: var(--espaco-entre-linhas);
+    width: 90%;
+    border-radius: 10px;
 }

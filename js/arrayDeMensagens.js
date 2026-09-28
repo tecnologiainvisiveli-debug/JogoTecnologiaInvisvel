@@ -21,7 +21,7 @@ const arrayDeMensagens = [
     /* Link para site falso */
     {
         titulo: "Explorando a internet",
-        mensagem: `Enquanto você navega pela internet, você encontra um site de chat online com várias pessoas conversando. Uma das pessoas comenta sobre um joguinho de navegador que suspostamente podese ganhar dinheiro de verdade. As outras pessoas parecem animadas e até mesmo falam que funcionou para elas. "Eai ${perfil.nomeDoUsuario}, vai tentar tmb???" - diz uma das pessoas`,
+        mensagem: `Enquanto você navega pela internet, você encontra um site de chat online com várias pessoas conversando. Uma das pessoas comenta sobre um joguinho de navegador que suspostamente podese ganhar dinheiro de verdade. As outras pessoas parecem animadas e até mesmo falam que funcionou para elas. "Eai {nomeDoUsuario}, vai tentar tmb???" - diz uma das pessoas`,
         opcao1: "Vou tentar, parece divertido!",
         opcao2: "Não me parece uma boa ideia"
     } 
