@@ -141,4 +141,7 @@ header {
     line-height: var(--espaco-entre-linhas);
     width: 90%;
     border-radius: 10px;
+    padding: 0 2%;
+    margin: 1% 2%;
+    border-bottom: 4px solid var(--cor-do-body);
 }

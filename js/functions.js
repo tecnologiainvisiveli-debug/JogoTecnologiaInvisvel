@@ -7,11 +7,11 @@ function mudarMensagem(titulo) {
             pJogoPrincipal.textContent = arrayDeMensagens[i].mensagem;
             
             /* Se for a mensagem de boas-vindas */
-            if (arrayDeMensagens[i].titulo === "Boas-vindas") {
+            if (arrayDeMensagens[i].titulo === "Boas-Vindas") {
                 decisaoDoUsuario.innerHTML = "<button id='btn1'>Começar</button>";
 
             /* Se for a mensagem de criação de conta */
-            } else if (arrayDeMensagens[i].titulo === "Criando uma conta") {
+            } else if (arrayDeMensagens[i].titulo === "Criando uma Conta") {
                 decisaoDoUsuario.innerHTML = `
                     <input type="text" placeholder="Digite seu nome de usuário">
                     <button id="btnConfirmar">Confirmar</button>

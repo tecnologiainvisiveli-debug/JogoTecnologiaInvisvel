@@ -1,5 +1,5 @@
 /* Boas-vindas */
-mudarMensagem("Boas-vindas");
+mudarMensagem("Boas-Vindas");
 
 /* Primeira opção de uma mensagem */
 let btn1 = document.querySelector('#btn1');
