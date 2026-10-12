@@ -2,7 +2,30 @@
 let perfil = {
     nomeDoUsuario: "",
     nivelDeSeguranca: 100
-};
+};   
+
+// === Etapas possíveis do Jogo === // posições //
+const etapas = [
+    'Boas-Vindas',                // 0 // === Boas-Vindas ===
+    'Criando uma Conta',          // 1 // === Decidindo o nome de usuário ===
+    'Explorando a Internet',      // 2 // === Link para site falso ===
+    'Preenchendo as Informações', // 3 // === Expondo dados pessoais no site falso ===
+    'A Pressão Aumenta',          // 4 // === Sendo ifluênciado por pessoas más === 
+    'Algo Deu Errado',            // 5 // === Pegando o primeiro vírus ===
+    'Voltou Tudo ao Normal',      // 6 // === Removendo vírus sozinho ===
+    'Hora de Jogar Um Pouquinho', // 7 // === Conhecendo outros amigos jogadores ===
+    'Viva a Pirataria',           // 8 // === Baixando jogo pirata ===
+    'Quase lá',                   // 9 // === Sendo hackeado por arquivo malicioso ===
+    'Obedencendo a Lei',          // 10 // === Denunciando criminoso com LGPD ===
+    'Alerta de Conteúdo Chocante',// 11 // === Recebendo vídeo fake de famoso ===
+    'Compartilhando com Geral',   // 12 // === Espalhando fake news ===
+    'O Que Realmente Aconteceu',  // 13 // === Evitando compartilhar fake news ===
+    'Espalhando a Verdade',       // 14 // === Alertando pessoas sobre fake news e conhecendo a IA ===
+    'Aprendendo Coisas Novas',    // 15 // === Explorando a inteligência artificial ===
+    'Sendo Aconselhado',          // 16 // === Sendo aconselhado por um colega ===
+    'Fim',                        // 17 // === Final ===
+    'Dados Perdidos'              // 18 // === Game Over ===
+];
 
 /* === Mensagens do jogo === */
 const arrayDeMensagens = [
@@ -42,7 +65,7 @@ const arrayDeMensagens = [
         mensagem: 'Depois de hesitar, você começa a receber novas mensagens de outros usuários. Eles insistem que o link é seguro e garantem que outras pessoas já conseguiram dinheiro através dele. Quanto mais mensagens chegam, mais difícil fica ignorar a pressão.',
 
         opcao1: 'Se funcionou para todos, funciona!',
-        opcao2: 'Ainda não vo fazer isso'
+        opcao2: 'Ainda não vou fazer isso'
     },
 
     /* === Pegando o primeiro vírus === */
@@ -68,7 +91,7 @@ const arrayDeMensagens = [
         mensagem: 'Você conhece um grupo de pessoas amigáveis em uma sala, um deles fala “bora jogar hj com a gente {nomeDoUsuario}”, quando você vai na loja para instalar o suposto jogo, ele é pago, mas e agora! Não temos dinheiro para comprar isso agora, quase desistindo você lembra de ter visto como se baixa coisas piratas completamente de graça, por que não testar, não é mesmo?',
 
         opcao1: 'Melhor deixar para lá',
-        opcao2: 'Já que eu sei, oque pode dar errado'
+        opcao2: 'Já que eu sei, o que pode dar errado'
     },
 
     /* === Baixando jogo pirata === */
@@ -153,5 +176,11 @@ const arrayDeMensagens = [
     {
         titulo: 'Fim',
         mensagem: 'Parabéns, você conseguiu chegar até o final da história. Agradeçemos por permanecer até aqui, esperamos que você tenha gostado e aprendido muito sobre o perigo de se usar a internet sem ter cuidados, esse tipo de coisa está se tornando cada vez mais frequentes. Agora você pode abrir o histórico e reler sua história ou reiniciar a página para jogar de novo. Obrigado mais uma vez, Tchau {nomeDoUsuario}! E se proteja.'
+    },
+
+    /* === Game Over === */
+    {
+        titulo: 'Dados Perdidos',
+        mensagem: 'Infelizmente, você perdeu todos os seus dados e não conseguiu recuperar sua conta. Isso pode acontecer quando se compartilha informações pessoais com sites ou pessoas não confiáveis. Lembre-se sempre de proteger suas informações e ter cuidado ao navegar na internet. Esperamos que você tenha aprendido com essa experiência e que da próxima vez, tome decisões mais seguras. Agora você pode reiniciar a página para jogar de novo ou reler sua história na aba de histórico. Boa sorte!l'
     }
 ];

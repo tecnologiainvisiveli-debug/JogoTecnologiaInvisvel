@@ -8,4 +8,4 @@ let pJogoPrincipal = document.querySelector('#abaContinuarJogando .conteudoAba p
 let decisaoDoUsuario = document.querySelector('#abaContinuarJogando .conteudoAba #decisaoDoUsuario');
 
 /* Aba "Histórico" */
-let historico = document.querySelector('#abaHistorico .conteudoAba')
+let historico = document.querySelector('#abaHistorico .conteudoAba');

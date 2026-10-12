@@ -1,4 +1,4 @@
-/* Função para passar as etapas do jogo */
+﻿/* Função para passar as etapas do jogo */
 function mudarMensagem(titulo) {
     for (let i = 0; i < arrayDeMensagens.length; i++) {
 
@@ -8,22 +8,27 @@ function mudarMensagem(titulo) {
             
             /* Se for a mensagem de boas-vindas */
             if (arrayDeMensagens[i].titulo === "Boas-Vindas") {
-                decisaoDoUsuario.innerHTML = "<button id='btn1'>Começar</button>";
+                decisaoDoUsuario.innerHTML = '<button class="btn1">Começar</button>';
 
             /* Se for a mensagem de criação de conta */
             } else if (arrayDeMensagens[i].titulo === "Criando uma Conta") {
                 decisaoDoUsuario.innerHTML = `
-                    <input type="text" placeholder="Digite seu nome de usuário">
+                    <input type="text" placeholder="Digite seu nome de usuário" id="inputNomeUsuario">
                     <button id="btnConfirmar">Confirmar</button>
                 `;
 
-            /* Se a mensagem conter as duas opções de decisão do usuário */
-            } else {
+            // Se for a mensagem de game over ou final
+            } else if (arrayDeMensagens[i].titulo === "Dados Perdidos" || arrayDeMensagens[i].titulo === "Fim") {
+                decisaoDoUsuario.innerHTML = '<button class="btnReiniciar" onclick="window.location.reload()">Jogar Novamente</button>';
+
+            } else if (arrayDeMensagens[i].opcao1 && arrayDeMensagens[i].opcao2) {
                 decisaoDoUsuario.innerHTML = `
-                    <button id="btn1">${arrayDeMensagens[i].opcao1}</button>
-                    <button id="btn2">${arrayDeMensagens[i].opcao2}</button>
+                    <button class="btn1">${arrayDeMensagens[i].opcao1}</button>
+                    <button class="btn2">${arrayDeMensagens[i].opcao2}</button>
                 `;
-            };
+            } else {
+                decisaoDoUsuario.innerHTML = `<button class="btn1">${arrayDeMensagens[i].opcao1}</button>`;
+            }
             pJogoPrincipal.textContent = arrayDeMensagens[i].mensagem.replace("{nomeDoUsuario}", perfil.nomeDoUsuario)
         }
     }
@@ -36,16 +41,46 @@ function addHistorico(btnClicado) {
 
     let titulo = document.createElement('p');
     titulo.appendChild(document.createTextNode(h2JogoPrincipal.textContent));
-    
+    divEtapa.appendChild(titulo);
+
     let mensagem = document.createElement('p');
     mensagem.appendChild(document.createTextNode(pJogoPrincipal.textContent));
-
-    let opcEscolhida = document.createElement('p');
-    opcEscolhida.appendChild(document.createTextNode(btnClicado.textContent));
-
-    divEtapa.appendChild(titulo);
     divEtapa.appendChild(mensagem);
-    divEtapa.appendChild(opcEscolhida);
 
-    historico.appendChild(divEtapa)
+    if (titulo.textContent === 'Boas-Vindas') {
+        let opcEscolhida = document.createElement('p');
+        opcEscolhida.appendChild(document.createTextNode(btnClicado.textContent));
+        divEtapa.appendChild(opcEscolhida);
+    } else if (titulo.textContent === 'Criando uma Conta') {
+        let opcEscolhida = document.createElement('p');
+        opcEscolhida.appendChild(document.createTextNode(perfil.nomeDoUsuario));
+        divEtapa.appendChild(opcEscolhida);
+    } else {
+        let opcEscolhida = document.createElement('p');
+        opcEscolhida.appendChild(document.createTextNode(`${perfil.nomeDoUsuario}: ${btnClicado.textContent}`));
+        divEtapa.appendChild(opcEscolhida);
+    };
+
+    historico.appendChild(divEtapa);
 };
+
+/* Função para adicionar informações à aba de status */
+function addStatus() {
+    const nome = document.querySelector(
+        '#abaStatusPersonagem .conteudoAba > h2:first-of-type'
+    );
+    const emailElement = document.querySelector(
+        '#abaStatusPersonagem .conteudoAba > p:first-of-type'
+    );
+
+    if (nome) {
+        nome.textContent = perfil.nomeDoUsuario;
+    }
+
+    if (emailElement) {
+        const email = perfil.nomeDoUsuario
+            .toLowerCase()
+            .replace(/\s+/g, '') + '@email.com.br';
+        emailElement.textContent = `Email: ${email}`;
+    }
+}

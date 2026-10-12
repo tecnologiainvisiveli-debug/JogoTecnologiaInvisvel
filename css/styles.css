@@ -113,16 +113,77 @@ header {
     justify-content: space-around;
     align-items: center;
 }
-#btn1, #btn2 {
-    height: 80%;
-    width: 30%;
+.btn1, .btn2, .btnReiniciar {
+    height: 40%;
+    width: 40%;
+    border: 2px solid var(--cor-de-alerta-e-destaques);
+    border-radius: 10px;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-alerta-e-destaques);
+    font-family: var(--fonte-das-opcoes);
+    font-size: larger;cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+.btn1:hover, .btn2:hover, .btnReiniciar:hover {
+    background-color: var(--cor-de-alerta-e-destaques);
+    color: var(--cor-de-fundo);
+}
+#jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario input[type="text"] {
+    height: 40%;
+    width: 70%;
     border: 2px solid var(--cor-de-alerta-e-destaques);
     border-radius: 10px;
     background-color: var(--cor-de-fundo);
     color: var(--cor-de-alerta-e-destaques);
     font-family: var(--fonte-das-opcoes);
     font-size: larger;
+}
+#jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario #btnConfirmar {
+    height: 40%;
+    width: 20%;
+    border: 2px solid var(--cor-de-alerta-e-destaques);
+    border-radius: 10px;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-alerta-e-destaques);
+    font-family: var(--fonte-das-opcoes);
+    font-size: larger;
+}
+#jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario #btnConfirmar:hover {
+    background-color: var(--cor-de-alerta-e-destaques);
+    color: var(--cor-de-fundo);
+}
 
+/* Estilização da Aba "Status do Personagem" */
+#statusPersonagem:checked + #abaStatusPersonagem {
+    display: flex;
+    grid-area: abaVisualizada;
+    background-color: var(--cor-de-fundo);
+    justify-content: center;
+    align-items: center;
+}
+#statusPersonagem:checked + #abaStatusPersonagem .conteudoAba {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-segundaria);
+    height: 90%;
+    width: 60%;
+}
+#statusPersonagem:checked + #abaStatusPersonagem .conteudoAba .imgStatusPersonagem {
+    width: 25%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#statusPersonagem:checked + #abaStatusPersonagem .conteudoAba h2 {
+    color: var(--cor-dos-titulos);
+    font-family: var(--fonte-dos-titulos);
+}
+#statusPersonagem:checked + #abaStatusPersonagem .conteudoAba p {
+    color: var(--cor-do-texto-principal);
+    font-family: var(--fonte-do-texto-principal);
 }
 
 /* Estilização da Aba "Histórico" */
