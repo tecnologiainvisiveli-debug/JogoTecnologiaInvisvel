@@ -18,6 +18,19 @@
     src: url("../fontes/Exo_2 font/Exo2-Regular.ttf") format("truetype");
     font-weight: 400;
 }
+/* Fonte JetBrains Mono */
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../fontes/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 800;
+}
+/* Fonte Press Start 2P */
+@font-face {
+    font-family: "Press Start 2P";
+    src: url("../fontes/Press_Start_2P/PressStart2P-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
 
 /* Variáveis CSS */
 :root {
@@ -31,9 +44,19 @@
     --cor-de-alerta-e-destaques: #ff0055;
     --cor-do-body: #7000ff;
 
+    /* Cores dos Pop-ups */
+    --cor-primaria-pop-up-ganho: #00ff66;
+    --cor-primaria-pop-up-perda: #ff0033;
+    --cor-segundaria-pop-up-ganho: #0a3f1f;
+    --cor-segundaria-pop-up-perda: #4a0d18;
+
     /* Tipografia */
     --fonte-dos-titulos: "Orbitron", sans-serif;
     --fonte-das-opcoes: "Chakra Petch", sans-serif;
     --fonte-do-texto-principal: "Exo 2", sans-serif;
     --espaco-entre-linhas: 1.5;
+
+    /* Tipografia dos Pop-ups */
+    --fonte-pop-up-titulos: "Press Start 2P", sans-serif;
+    --fonte-pop-up-texto-principal: "JetBrains Mono", sans-serif;
 }

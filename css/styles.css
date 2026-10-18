@@ -15,16 +15,17 @@
 
 /* Grid Layout */ 
 body {
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
     grid-template-areas:
         "header header"
         "sideBar abaVisualizada";
     background-color: var(--cor-do-body);
     gap: 5px;
+    overflow: hidden;
 }
 
 /* Estilização da Barra Lateral */
@@ -113,6 +114,7 @@ header {
     justify-content: space-around;
     align-items: center;
 }
+/* Somente em etapas finais ("Final" e "Game Over") */
 .btn1, .btn2, .btnReiniciar {
     height: 40%;
     width: 40%;
@@ -129,6 +131,7 @@ header {
     background-color: var(--cor-de-alerta-e-destaques);
     color: var(--cor-de-fundo);
 }
+/* Somente na etapa "Decidindo o nome de usuário" */
 #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario input[type="text"] {
     height: 40%;
     width: 70%;
@@ -187,13 +190,20 @@ header {
 }
 
 /* Estilização da Aba "Histórico" */
+#historico:checked + #abaHistorico {
+    display: flex;
+    min-height: 0;
+    overflow: hidden;
+}
 #historico:checked + #abaHistorico .conteudoAba {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: scroll;
-    height: 100%;
-
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #39414b transparent;
 }
 .etapaConcluida {
     background-color: var(--cor-segundaria);
@@ -205,4 +215,24 @@ header {
     padding: 0 2%;
     margin: 1% 2%;
     border-bottom: 4px solid var(--cor-do-body);
+}
+/* Barra de rolagem na aba "Histórico" */
+#historico:checked + #abaHistorico .conteudoAba::-webkit-scrollbar {
+    width: 8px;
+}
+#historico:checked + #abaHistorico .conteudoAba::-webkit-scrollbar-track {
+    background: transparent;
+}
+#historico:checked + #abaHistorico .conteudoAba::-webkit-scrollbar-thumb {
+    background-color: #39414b;
+    border: 2px solid var(--cor-de-fundo);
+    border-radius: 10px;
+}
+#historico:checked + #abaHistorico .conteudoAba::-webkit-scrollbar-thumb:hover {
+    background-color: #566170;
+}
+
+/* Estilização das mensagens Pop-up */
+#espacPopup {
+    display: none;
 }
