@@ -87,7 +87,7 @@ function addStatus() {
 
 // Função para manipular nivel de segurança e mostrar na aba "statusPersonagem"
 function updSecLevel(valor,operacao,callback) {
-    const nivelDeSeguranacaElement = document.querySelector('#statusPersonagem:checked + #abaStatusPersonagem .conteudoAba h2:nth-child(2) span ');
+    const nivelDeSegurancaElement = document.querySelector('#abaStatusPersonagem .nivelSegurancaValor');
     // Para aumento do nível de segurança
     if (operacao === 'adicao') {
         perfil.nivelDeSeguranca += valor;
@@ -96,10 +96,14 @@ function updSecLevel(valor,operacao,callback) {
         perfil.nivelDeSeguranca -= valor;
     } else {
         console.log('operação invalida na função "updSecLevel".');
+        return;
     };
-    nivelDeSeguranacaElement.textContent = perfil.nivelDeSeguranca;
-    // O parametro "callback1" deve ter o valor definido com a função "createPopUp"
-    callback(valor,operacao,fecharPopUp);
+    if (nivelDeSegurancaElement) {
+        nivelDeSegurancaElement.textContent = `${perfil.nivelDeSeguranca}%`;
+    }
+    if (typeof callback === 'function') {
+        callback(valor,operacao,fecharPopUp);
+    }
 };
 
 // Função callback para criar a mensagem pop-up
@@ -110,14 +114,17 @@ function createPopUp(valor,operacao,callback) {
     const popUpPerdaSec = document.querySelector('#pop-upPerdaSec');
     const fecharPopupPerda = document.querySelector('#pop-upPerdaSec .btnFecharPop-up');
 
+    // Esconde os dois pop-ups antes de exibir o correspondente à operação.
+    popUpGanhoSec.style.display = 'none';
+    popUpPerdaSec.style.display = 'none';
+
     // Pop-up de aumento do nível de segurança
     if (operacao === 'adicao') {
         espacPopup.style.setProperty('display','flex','important');
-        popUpGanhoSec.style.display = 'block';
-        // Título h3 do pop-up para ganho de segurança
-        popUpGanhoSec.firstElementChild.textContent = popUpGanhoSec.firstElementChild.textContent.replace('[quantia]',valor);
-        // Paragrafo do pop-up para ganho de segurança
-        popUpGanhoSec.lastElementChild.textContent = popUpGanhoSec.lastElementChild.textContent.replace('[quantia]',valor);
+        popUpGanhoSec.style.display = 'flex';
+        popUpGanhoSec.querySelector('h3').textContent = `+${valor}%sec`;
+        popUpGanhoSec.querySelector('.p-container-pop-up p').textContent =
+            `Você ganhou ${valor}% de nível de segurança! Sua segurança aumentou. Continue assim!`;
 
         // O parâmentro "callback" deverá ter o valor definido como a função "fecharPopUp" 
         fecharPopupGanho.addEventListener('click',callback);
@@ -125,11 +132,11 @@ function createPopUp(valor,operacao,callback) {
     // Pop-up de diminuição do nível de segurança
     } else if (operacao === 'subtracao') {
         espacPopup.style.setProperty('display','flex','important');
-        popUpPerdaSec.style.display = 'block';
+        popUpPerdaSec.style.display = 'flex';
         // Título h3 do pop-up para perda de segurança
-        popUpPerdaSec.firstElementChild.textContent = popUpPerdaSec.firstElementChild.textContent.replace('[quantia]',valor);
-        // Paragrafo do pop-up para perda de segurança
-        popUpPerdaSec.lastElementChild.textContent = popUpPerdaSec.lastElementChild.textContent.replace('[quantia]',valor);
+        popUpPerdaSec.querySelector('h3').textContent = `-${valor}%sec`;
+        popUpPerdaSec.querySelector('.p-container-pop-up p').textContent =
+            `Você perdeu ${valor}% de nível de segurança. Sua segurança diminuiu. Fique atento!`;
         
         // O parâmentro "callback" deverá ter o valor definido como a função "fecharPopUp" 
         fecharPopupPerda.addEventListener('click',callback);
@@ -144,10 +151,17 @@ function fecharPopUp() {
     const espacPopup = document.querySelector('#espacPopup');
     const popUpGanhoSec = document.querySelector('#pop-upGanhoSec');
     const popUpPerdaSec = document.querySelector('#pop-upPerdaSec');
-    if (popUpGanhoSec.style.display === 'block') {
+    if (popUpGanhoSec.style.display === 'flex') {
         popUpGanhoSec.style.display = 'none';
-    } else if (popUpPerdaSec.style.display === 'block') {
+    } else if (popUpPerdaSec.style.display === 'flex') {
         popUpPerdaSec.style.display = 'none';
     };
-    espacPopup.style.setProperty('display','none','important');
+    espacPopup.style.setProperty('display','none','important'); 
 };
+
+// Função para o nível de segurança não passar de 100%
+function levelMaxSeguranca() {
+    if (perfil.nivelDeSeguranca > 100) {
+        perfil.nivelDeSeguranca =  100;
+    };
+}

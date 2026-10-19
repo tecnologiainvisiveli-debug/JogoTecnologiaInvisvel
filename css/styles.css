@@ -233,6 +233,97 @@ header {
 }
 
 /* Estilização das mensagens Pop-up */
+/* Funcionamento geral dos pop-ups */
 #espacPopup {
+    display: none !important;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.conteudoPop-up {
+    padding: 5%;
+}
+.pop-up {
+    position: relative;
+    height: 30vh;
+    width: 30vh;
+    border-radius: 10px;
+    align-items: center;
+    min-width: 185px;
+    font-family: var(--fonte-pop-up-texto-principal);
+}
+.pop-up h3 {
+    font-family: var(--fonte-pop-up-titulos);
+    font-size: 125%;
+    margin: 0% 0% 5% 0%;
+}
+.pop-up p {
+    font-family: var(--fonte-pop-up-texto-principal);
+    text-align: center;
+}
+.p-container-pop-up{
+    padding: 2%;
+    border-radius: 10px;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.btnFecharPop-up {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btnFecharPop-up .img-btnFechar {
+    fill: currentColor;
+}
+/* Pop-up para ganho de segurança */
+#pop-upGanhoSec {
     display: none;
+    background-color: var(--cor-primaria-pop-up-ganho);
+    box-shadow: 0px 0px 30px var(--cor-primaria-pop-up-ganho);
+}
+#pop-upGanhoSec .p-container-pop-up {
+    background-color: var(--cor-segundaria-pop-up-ganho);
+}
+#pop-upGanhoSec h3 {
+    color: var(--cor-segundaria-pop-up-ganho);
+}
+#pop-upGanhoSec p {
+    color: var(--cor-primaria-pop-up-ganho);
+}
+#pop-upGanhoSec .btnFecharPop-up {
+    border: 2px solid var(--cor-segundaria-pop-up-ganho);
+    background-color: var(--cor-primaria-pop-up-ganho);
+    color: var(--cor-segundaria-pop-up-ganho);
+}
+/* Pop-up para perda de segurança */
+#pop-upPerdaSec {
+    display: none;
+    background-color: var(--cor-primaria-pop-up-perda);
+    box-shadow: 0px 0px 30px var(--cor-primaria-pop-up-perda);
+}
+#pop-upPerdaSec .p-container-pop-up {
+    background-color: var(--cor-segundaria-pop-up-perda);
+}
+#pop-upPerdaSec h3 {
+    color: var(--cor-segundaria-pop-up-perda);
+}
+#pop-upPerdaSec p {
+    color: var(--cor-primaria-pop-up-perda);
+}
+#pop-upPerdaSec .btnFecharPop-up {
+    border: 2px solid var(--cor-segundaria-pop-up-perda);
+    background-color: var(--cor-primaria-pop-up-perda);
+    color: var(--cor-segundaria-pop-up-perda);
 }
