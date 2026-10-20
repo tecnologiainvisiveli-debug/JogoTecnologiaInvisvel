@@ -57,9 +57,7 @@ function mostrarEtapa(titulo) {
         updSecLevel(12, 'adicao', createPopUp);
     } else if (titulo === 'Aprendendo Coisas Novas') {
         updSecLevel(26, 'subtracao', createPopUp);
-    } else if (titulo === "Dados Perdidos") {
-        updSecLevel(perfil.nivelDeSeguranca,'subtracao',createPopUp);
-    }
+    };
 }
 
 // Delegação: decisaoDoUsuario permanece no HTML mesmo quando seus botões mudam.
