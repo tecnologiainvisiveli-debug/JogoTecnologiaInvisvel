@@ -166,7 +166,7 @@ const arrayDeMensagens = [
     /* Sendo aconselhado por um colega === */
     {
         titulo:  'Sendo Aconselhado',
-        mensagem: 'Uma pessoa daquele chat público, te pede a sua conta emprestada para usar rapidamente, diz que perdeu a senha, você empresta, mas enquanto ele utiliza a IA revela diversos dados pessoais. Por sorte, ele só te avisa “{nomeDoUsuario}, já terminei aqui, sabia que sua IA tá revelando tudo seu?”. Você pergunta o que pode ser feito, ele diz para você pesquisar sobre modelos de IA locais, IA personalizada, funcionando direito do seu computador. Você gosta da ideia, parece muito mais seguro.',
+        mensagem: 'Uma pessoa daquele chat público pede sua conta emprestada para usar rapidamente e diz que perdeu a senha. Você empresta, mas, enquanto ela utiliza a IA, a ferramenta revela diversos dados pessoais. Por sorte, ela só te avisa: “, já terminei aqui, sabia que sua IA tá revelando tudo seu?”. Você pergunta o que pode ser feito, e ela diz para você pesquisar sobre modelos de IA locais, ou seja, uma IA personalizada que funcione diretamente no seu computador. Você gosta da ideia, pois parece muito mais seguro.',
 
         opcao1: 'Vou buscar saber mais sobre',
         opcao2: 'Não usar mais é melhor'
@@ -175,12 +175,12 @@ const arrayDeMensagens = [
     /* === Final === */
     {
         titulo: 'Fim',
-        mensagem: 'Parabéns, você conseguiu chegar até o final da história. Agradeçemos por permanecer até aqui, esperamos que você tenha gostado e aprendido muito sobre o perigo de se usar a internet sem ter cuidados, esse tipo de coisa está se tornando cada vez mais frequentes. Agora você pode abrir o histórico e reler sua história ou reiniciar a página para jogar de novo. Obrigado mais uma vez, Tchau {nomeDoUsuario}! E se proteja.'
+        mensagem: 'Parabéns, você conseguiu chegar até o final da história! Agradecemos por permanecer até aqui. Esperamos que você tenha gostado e aprendido muito sobre os perigos de usar a internet sem tomar os devidos cuidados. Esse tipo de situação está se tornando cada vez mais frequente. Agora, você pode abrir o histórico e reler sua história ou reiniciar a página para jogar de novo. Obrigado mais uma vez! Tchau, ! E se proteja.'
     },
 
     /* === Game Over === */
     {
         titulo: 'Dados Perdidos',
-        mensagem: 'Infelizmente, você perdeu todos os seus dados e não conseguiu recuperar sua conta. Isso pode acontecer quando se compartilha informações pessoais com sites ou pessoas não confiáveis. Lembre-se sempre de proteger suas informações e ter cuidado ao navegar na internet. Esperamos que você tenha aprendido com essa experiência e que da próxima vez, tome decisões mais seguras. Agora você pode reiniciar a página para jogar de novo ou reler sua história na aba de histórico. Boa sorte!l'
+        mensagem: 'Infelizmente, você perdeu todos os seus dados e não conseguiu recuperar sua conta. Isso pode acontecer quando se compartilham informações pessoais com sites ou pessoas não confiáveis. Lembre-se sempre de proteger suas informações e ter cuidado ao navegar na internet. Esperamos que você tenha aprendido com essa experiência e que, da próxima vez, tome decisões mais seguras. Agora, você pode reiniciar a página para jogar de novo ou reler sua história na aba de histórico. Boa sorte!'
     }
 ];
