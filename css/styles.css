@@ -48,10 +48,13 @@ body {
     align-items: center;
     font-family: var(--fonte-das-opcoes);
     border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .btnAbas:hover {
     background-color: var(--cor-de-alerta-e-destaques);
     color: var(--cor-de-fundo);
+    transform: scale(1.1) translateX(10px);
+    box-shadow: 0px 0px 30px var(--cor-de-alerta-e-destaques);
 }
 .btnAbas .imgAbas {
     width: 20px;
@@ -59,6 +62,13 @@ body {
     margin-right: 10px;
     fill: currentColor;
     flex-shrink: 0;
+}
+.imgICSlogo {
+    height: 25vh;
+    width: 25vh;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
 }
 
 /* Estilização do Cabeçalho */
@@ -70,6 +80,7 @@ header {
     align-items: center;
     justify-content: center;
     font-family: var(--fonte-dos-titulos);
+    text-shadow: 0px 0px 10px var(--cor-dos-titulos);
 }
 
 /* Estilização da Aba "Jogo Principal" */
@@ -84,7 +95,7 @@ header {
     height: 90%;
     width: 90%;
     background-color: var(--cor-segundaria);
-    border-radius: 10px;
+    border-radius: 20px;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 2fr 1fr;
@@ -92,12 +103,16 @@ header {
         "titulo"
         "mensagem"
         "decisao";
+        border-bottom: 4px solid var(--cor-do-texto-principal);
+        border-right: 4px solid var(--cor-do-texto-principal);
 }
 #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba h2 {
     grid-area: titulo;
     color: var(--cor-dos-titulos);
     font-family: var(--fonte-dos-titulos);
     text-align: center;
+    font-size: 200%;
+    text-shadow: 0px 0px 10px var(--cor-dos-titulos);
 }
 #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba p {
     grid-area: mensagem;
@@ -107,6 +122,7 @@ header {
     margin-left: 2%;
     margin-right: 2%;
     line-height: var(--espaco-entre-linhas);
+    font-size: 115%;
 }
 #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario {
     grid-area: decisao;
@@ -124,12 +140,13 @@ header {
     color: var(--cor-de-alerta-e-destaques);
     font-family: var(--fonte-das-opcoes);
     font-size: larger;cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0px 0px 30px var(--cor-de-alerta-e-destaques);
 }
 .btn1:hover, .btn2:hover, .btnReiniciar:hover {
     background-color: var(--cor-de-alerta-e-destaques);
     color: var(--cor-de-fundo);
+    transform: scale(0.9);
 }
 /* Somente na etapa "Decidindo o nome de usuário" */
 #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario input[type="text"] {
@@ -141,6 +158,7 @@ header {
     color: var(--cor-de-alerta-e-destaques);
     font-family: var(--fonte-das-opcoes);
     font-size: larger;
+    box-shadow: 0px 0px 30px var(--cor-de-alerta-e-destaques);
 }
 #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario #btnConfirmar {
     height: 40%;
@@ -151,10 +169,14 @@ header {
     color: var(--cor-de-alerta-e-destaques);
     font-family: var(--fonte-das-opcoes);
     font-size: larger;
+    box-shadow: 0px 0px 30px var(--cor-de-alerta-e-destaques);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+
 }
 #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario #btnConfirmar:hover {
     background-color: var(--cor-de-alerta-e-destaques);
     color: var(--cor-de-fundo);
+    transform: scale(0.9);
 }
 
 /* Estilização da Aba "Status do Personagem" */
@@ -173,6 +195,9 @@ header {
     background-color: var(--cor-segundaria);
     height: 90%;
     width: 60%;
+    border-radius: 20px;
+    border-bottom: 4px solid var(--cor-do-texto-principal);
+    border-right: 4px solid var(--cor-do-texto-principal);
 }
 #statusPersonagem:checked + #abaStatusPersonagem .conteudoAba .imgStatusPersonagem {
     width: 25%;
@@ -214,7 +239,7 @@ header {
     border-radius: 10px;
     padding: 0 2%;
     margin: 1% 2%;
-    border-bottom: 4px solid var(--cor-do-body);
+    border-bottom: 4px solid var(--cor-do-texto-principal);
 }
 /* Barra de rolagem na aba "Histórico" */
 #historico:checked + #abaHistorico .conteudoAba::-webkit-scrollbar {

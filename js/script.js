@@ -43,21 +43,31 @@ function mostrarEtapa(titulo) {
 
     if (titulo === 'Preenchendo as Informações') {
         updSecLevel(43, 'subtracao', createPopUp);
+        levelMaxSeguranca();
     } else if (titulo === 'Algo Deu Errado') {
         updSecLevel(34, 'subtracao', createPopUp);
+        levelMaxSeguranca();
     } else if (titulo === 'Voltou Tudo ao Normal') {
         updSecLevel(37, 'adicao', createPopUp);
+        levelMaxSeguranca();
     } else if (titulo === 'Quase lá') {
         updSecLevel(55, 'subtracao', createPopUp);
+        levelMaxSeguranca();
     } else if (titulo === 'Obedencendo a Lei') {
         updSecLevel(58, 'adicao', createPopUp);
+        levelMaxSeguranca();
     } else if (titulo === 'Compartilhando com Geral') {
         updSecLevel(12, 'subtracao', createPopUp);
+        levelMaxSeguranca();
     } else if (titulo === 'O Que Realmente Aconteceu') {
         updSecLevel(12, 'adicao', createPopUp);
+        levelMaxSeguranca();
     } else if (titulo === 'Aprendendo Coisas Novas') {
         updSecLevel(26, 'subtracao', createPopUp);
-    };
+        levelMaxSeguranca();
+    } else if (titulo === 'Dados Perdidos') {
+        updSecLevel(Number(perfil.nivelDeSeguranca),'subtracao',createPopUp);
+    }
 }
 
 // Delegação: decisaoDoUsuario permanece no HTML mesmo quando seus botões mudam.

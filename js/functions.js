@@ -162,6 +162,7 @@ function fecharPopUp() {
 // Função para o nível de segurança não passar de 100%
 function levelMaxSeguranca() {
     if (perfil.nivelDeSeguranca > 100) {
-        perfil.nivelDeSeguranca =  100;
+        perfil.nivelDeSeguranca = 100;
+        document.querySelector('#abaStatusPersonagem .conteudoAba h2:last-child .nivelSegurancaValor').textContent = `100%`;
     };
 }
