@@ -34,7 +34,14 @@ body {
     background-color: var(--cor-segundaria);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#sideBar .btn-container-sideBar {
+    display: flex;
+    flex-direction: column;
     align-items: right;
+    width: 100%;
 }
 .btnAbas {
     background-color: var(--cor-de-fundo);
@@ -64,11 +71,8 @@ body {
     flex-shrink: 0;
 }
 .imgICSlogo {
-    height: 25vh;
-    width: 25vh;
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
+    width: 25vmin;
+    height: 25vmin;
 }
 
 /* Estilização do Cabeçalho */
@@ -103,8 +107,8 @@ header {
         "titulo"
         "mensagem"
         "decisao";
-        border-bottom: 4px solid var(--cor-do-texto-principal);
-        border-right: 4px solid var(--cor-do-texto-principal);
+    border-bottom: 4px solid var(--cor-do-texto-principal);
+    border-right: 4px solid var(--cor-do-texto-principal);
 }
 #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba h2 {
     grid-area: titulo;
