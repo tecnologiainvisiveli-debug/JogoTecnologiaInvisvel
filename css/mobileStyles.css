@@ -1,0 +1,148 @@
+/* Ajustes para telas de celular */
+@media (max-width: 700px) {
+    body {
+        min-height: 100vh;
+        height: 100vh;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto minmax(0, 1fr);
+        grid-template-areas:
+            "header"
+            "sideBar"
+            "abaVisualizada";
+        gap: 4px;
+    }
+
+    header {
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: clamp(1.25rem, 6vw, 2rem);
+    }
+
+    #sideBar {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0.25rem;
+    }
+
+    #sideBar .btn-container-sideBar {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        gap: 0.25rem;
+    }
+
+    .btnAbas {
+        flex: 1;
+        min-width: 0;
+        justify-content: center;
+        padding: 0.65rem 0.35rem;
+        margin: 0;
+        text-align: center;
+        font-size: clamp(0.7rem, 3vw, 0.95rem);
+    }
+
+    .btnAbas .imgAbas {
+        width: 18px;
+        height: 18px;
+        margin-right: 0.35rem;
+    }
+
+    .btnAbas:hover {
+        transform: none;
+        box-shadow: 0 0 12px var(--cor-de-alerta-e-destaques);
+    }
+
+    .imgICSlogo {
+        display: none;
+    }
+
+    #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba {
+        box-sizing: border-box;
+        width: calc(100% - 1rem);
+        height: calc(100% - 1rem);
+        padding: 0.75rem;
+        grid-template-rows: minmax(3rem, 1fr) minmax(0, 2fr) minmax(4rem, 1fr);
+        border-radius: 14px;
+    }
+
+    #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba h2 {
+        font-size: clamp(1.1rem, 5vw, 1.6rem);
+    }
+
+    #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba p {
+        font-size: 1rem;
+    }
+
+    #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0.5rem 0;
+    }
+
+    .btn1,
+    .btn2,
+    .btnReiniciar {
+        min-height: 44px;
+        height: auto;
+        width: min(100%, 18rem);
+        font-size: 1rem;
+    }
+
+    #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario input[type="text"] {
+        box-sizing: border-box;
+        min-height: 44px;
+        height: auto;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #jogoPrincipal:checked + #abaContinuarJogando .conteudoAba #decisaoDoUsuario #btnConfirmar {
+        min-height: 44px;
+        height: auto;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #statusPersonagem:checked + #abaStatusPersonagem .conteudoAba {
+        box-sizing: border-box;
+        width: calc(100% - 1rem);
+        height: calc(100% - 1rem);
+        padding: 1rem;
+        text-align: center;
+        overflow-y: auto;
+    }
+
+    #statusPersonagem:checked + #abaStatusPersonagem .conteudoAba .imgStatusPersonagem {
+        width: min(38%, 8rem);
+    }
+
+    #statusPersonagem:checked + #abaStatusPersonagem .conteudoAba h2 {
+        font-size: clamp(1rem, 4.5vw, 1.4rem);
+    }
+
+    #historico:checked + #abaHistorico .conteudoAba {
+        padding: 0.5rem 0;
+    }
+
+    .etapaConcluida {
+        box-sizing: border-box;
+        width: calc(100% - 1rem);
+        padding: 0.25rem 0.75rem;
+        margin: 0.5rem;
+    }
+
+    .pop-up {
+        box-sizing: border-box;
+        width: min(90vw, 24rem);
+        height: auto;
+        min-height: 12rem;
+    }
+
+    .p-container-pop-up {
+        min-height: 7rem;
+        height: auto;
+    }
+}
