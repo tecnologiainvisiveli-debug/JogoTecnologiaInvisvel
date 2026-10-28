@@ -44,7 +44,7 @@ const arrayDeMensagens = [
     /* === Link para site falso === */
     {
         titulo: 'Explorando a Internet',
-        mensagem: 'Enquanto você navega pela internet, encontra um site de chat online com várias pessoas conversando. Uma das pessoas comenta sobre um joguinho de navegador com o qual supostamente seria possível ganhar dinheiro de verdade. As outras pessoas parecem animadas e até mesmo dizem que funcionou para elas. "Eai , vai tentar tmb???" — diz uma das pessoas',
+        mensagem: 'Enquanto você navega pela internet, encontra um site de chat online com várias pessoas conversando. Uma das pessoas comenta sobre um joguinho de navegador com o qual supostamente seria possível ganhar dinheiro de verdade. As outras pessoas parecem animadas e até mesmo dizem que funcionou para elas. "Eai {nomeDoUsuario}, vai tentar tmb???" — diz uma das pessoas',
 
         opcao1: 'Não me parece uma boa ideia',
         opcao2: 'Vou tentar! Parece divertido'
@@ -53,7 +53,7 @@ const arrayDeMensagens = [
     /* === Expondo dados pessoais no site falso === */
     {
         titulo: 'Preenchendo as Informações',
-        mensagem: 'Muito sagaz, você clica no link que enviaram no chat. Tudo aparenta ser bem receptivo, com patrocínios de diversas empresas. Você não as conhece, mas elas parecem ser famosas. A emoção toma conta de você, mas, com um enorme frio na barriga, você se depara com uma página que solicita suas informações bancárias para efetuar os pagamentos. Você já sabia que isso iria acontecer cedo ou tarde. E agora, qual será seu próximo passo? Vai responder ou escutar o medinho?',
+        mensagem: 'Muito sagaz, você clica no link que enviaram no chat. Tudo aparenta ser bem receptivo, com patrocínios de diversas empresas. Você não as conhece, mas elas parecem ser famosas. A emoção toma conta de você, mas, com um enorme frio na barriga, você se depara com uma página que solicita suas informações bancárias para efetuar os pagamentos. Você já sabia que isso iria acontecer cedo ou tarde. E agora, qual será seu próximo passo? Vai responder ou escutar o medinho? Hein {nomeDoUsuario}!',
 
         opcao1: 'Não sei se confio tanto assim',
         opcao2: 'Ha, já estou aqui mesmo'
@@ -88,7 +88,7 @@ const arrayDeMensagens = [
     /* === Conhecendo outros jogadores amigos === */
     {
         titulo: 'Hora de Jogar Um Pouquinho',
-        mensagem: 'Você conhece um grupo de pessoas amigáveis em uma sala. Um deles fala: “bora jogar hj com a gente ”. Quando você vai à loja para instalar o suposto jogo, descobre que ele é pago. Mas e agora?! Não temos dinheiro para comprar isso agora. Quase desistindo, você se lembra de ter visto como baixar coisas piratas completamente de graça. Por que não testar, não é mesmo?',
+        mensagem: 'Você conhece um grupo de pessoas amigáveis em uma sala. Um deles fala: “bora jogar hj com a gente {nomeDoUsuario}”. Quando você vai à loja para instalar o suposto jogo, descobre que ele é pago. Mas e agora?! Não temos dinheiro para comprar isso agora. Quase desistindo, você se lembra de ter visto como baixar coisas piratas completamente de graça. Por que não testar, não é mesmo?',
 
         opcao1: 'Melhor deixar para lá',
         opcao2: 'Já que eu sei, o que pode dar errado'

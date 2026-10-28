@@ -4,7 +4,7 @@ function mudarMensagem(titulo) {
 
         if (arrayDeMensagens[i].titulo === titulo) {
             h2JogoPrincipal.textContent = arrayDeMensagens[i].titulo;
-            pJogoPrincipal.textContent = arrayDeMensagens[i].mensagem;
+            pJogoPrincipal.textContent = arrayDeMensagens[i].mensagem.replace('{nomeDoUsuario}',perfil.nomeDoUsuario);
             
             /* Se for a mensagem de boas-vindas */
             if (arrayDeMensagens[i].titulo === "Boas-Vindas") {
@@ -29,7 +29,6 @@ function mudarMensagem(titulo) {
             } else {
                 decisaoDoUsuario.innerHTML = `<button class="btn1">${arrayDeMensagens[i].opcao1}</button>`;
             }
-            pJogoPrincipal.textContent = arrayDeMensagens[i].mensagem.replace("{nomeDoUsuario}", perfil.nomeDoUsuario)
         }
     }
 };
